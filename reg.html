@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@200&display=swap" rel="stylesheet">
+    <title>Sign up</title>
+    
+<body>
+
+    
+    <form id="form" method="get" class="formclass">
+        <br><h1 class="h1form">About you</h1>
+        <input class="reginfo" type="text" id="name" name="name" placeholder="Name and surname" required><br><br>
+        <input class="reginfo" type="text" autocomplete="on" id="email" placeholder="email" required><br><br>
+        <p><span id="emailError" class="regerror"></span></p>
+        <div class="radiobutdiv">
+            <label >What is your gender?</label><br>
+            <ul>
+
+                <div class="radiocheckbut"><input value="Male" class='radiobut' type="radio" name='gend' id="gender"><label for="gender" class="labbut">Male</label><br><br></div>
+                <div class="radiocheckbut"><input value="Female" class='radiobut' type="radio" name='gend' id="gender"><label for="gender" class="labbut">Female</label><br><br></div>
+                <div class="radiocheckbut"><input value="Do not prefer to say" class='radiobut' type="radio" name='gend' id="gender"><label for="gender" class="labbut">Prefer not to say</label><br><br></div>
+
+            </ul>
+            <label>Your country?</label><br><br>
+            <select id="country" name="country" class="form-list country formlist" value="Latvia"></select><br><br>
+
+            <label>What are you interested more?</label><br>
+            <ul>
+                <div class="radiocheckbut"><input class='radiobut' value="Sport" type="radio" name="inter" id="inter2" onchange="addelement(sportdiv)"><label class="labbut" for="inter1">Sport</label><br><br></div>
+                <div id="sportdiv" class="sportdiv" hidden><select name="Sport" id="Sport" class="formlist">
+                    <option>Gym</option>
+                    <option>Football</option>
+                    <option>Basketball</option>
+                    <option>Street sport</option>
+                </select></div><br>
+                <div class="radiocheckbut"><input class='radiobut' value="Book" type="radio" name="inter" id="inter2" onchange="addelement(bookdiv)"><label class="labbut" for="inter2">Books</label><br><br></div>
+                <div id="bookdiv" class="bookdiv" hidden><select name="Book" id="Book" class="formlist">
+                    <option>Reading</option>
+                    <option>Listening audio books</option>
+                    <option>Writing</option>
+                </select></div><br>
+                <div class="radiocheckbut"><input class='radiobut' value="Music" type="radio" name="inter" id="inter2" onchange="addelement(musicdiv)"><label class="labbut" for="inter3">Music</label><br><br><br></div>
+                <div id="musicdiv" class="musicdiv" hidden><select name="Music" id="Music" class="formlist">
+                    <option>Listening</option>
+                    <option>Writing texts</option>
+                    <option>Making rythms</option>
+                </select></div><br>
+            </ul>
+            
+        </div>
+        
+        <button submit class="logregbut"><Span class="logregspan">Submit</Span></button>
+    </form>
+    
+</body>
+<script src="script.js">
+    
+</script>
+</head>
+</html>
